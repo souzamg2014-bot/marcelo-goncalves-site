@@ -1,0 +1,6 @@
+# Arquivos locais que não fazem parte da landing page
+.edge-*/
+.chrome-*/
+preview-*.png
+.env
+.env.*
