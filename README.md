@@ -2,7 +2,7 @@
 
 Landing page estática para o link da bio do Instagram.
 
-O portfólio reúne Today Brazil, CRM da comunidade, Klooks, Balanços Patrimoniais, o perfil `@automati.zei` e uma chamada para um projeto secreto, sem detalhes ou data de lançamento. Os contatos continuam no Instagram pessoal e no LinkedIn.
+O portfólio reúne Today Brazil, Klooks, Balanços Patrimoniais, o perfil `@automati.zei` e uma chamada para um projeto secreto, sem detalhes ou data de lançamento. Os contatos continuam no Instagram pessoal e no LinkedIn.
 
 ## Abrir localmente
 
