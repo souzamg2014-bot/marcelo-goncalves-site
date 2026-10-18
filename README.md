@@ -2,6 +2,8 @@
 
 Landing page estática para o link da bio do Instagram.
 
+O portfólio reúne Today Brazil, CRM da comunidade, Klooks, Balanços Patrimoniais, o perfil `@automati.zei` e uma chamada para um projeto secreto, sem detalhes ou data de lançamento. Os contatos continuam no Instagram pessoal e no LinkedIn.
+
 ## Abrir localmente
 
 Abra `index.html` diretamente no navegador. Para conferir o comportamento mais próximo da hospedagem, também é possível iniciar um servidor local nesta pasta:
@@ -18,7 +20,8 @@ Depois, acesse `http://127.0.0.1:8080`.
 - `styles.css`: identidade visual e responsividade.
 - `script.js`: menu móvel e ano do rodapé.
 - `assets/`: imagem usada no perfil.
-- `downloads/`: e-book distribuído pelo botão principal.
+
+O e-book e suas chamadas foram retirados do site. Os materiais originais do guia permanecem na pasta `ebook/` do projeto editorial, fora deste repositório público.
 
 ## Publicação
 
@@ -33,4 +36,4 @@ Depois de criar o repositório no GitHub:
 3. Em `Build and deployment`, selecionar `GitHub Actions`.
 4. Acompanhar a primeira publicação na aba `Actions`.
 
-Antes de publicar, confirmar o endereço do LinkedIn. O domínio personalizado poderá ser configurado depois sem mudar a estrutura da página.
+O domínio personalizado poderá ser configurado depois sem mudar a estrutura da página.
