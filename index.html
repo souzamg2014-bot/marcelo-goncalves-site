@@ -2,173 +2,77 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Conheça os projetos de Marcelo Gonçalves: Today Brazil, Klooks, Balanços Patrimoniais, Automati.zei e novidades em breve.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="O laboratório aberto de Marcelo Gonçalves. Explore ferramentas gratuitas, monte prompts e acompanhe experiências com IA e dados.">
   <meta name="theme-color" content="#2453ed">
-  <title>Marcelo Gonçalves | Dados, mercado, produto e IA</title>
+  <meta property="og:title" content="Laboratório do Marcelo | Ferramentas gratuitas">
+  <meta property="og:description" content="Do conteúdo para a prática. Ferramentas e experiências gratuitas para explorar, testar e aprender.">
+  <meta property="og:type" content="website">
+  <title>Laboratório do Marcelo | Ferramentas gratuitas</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="laboratorio.config.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-
   <header class="site-header" id="inicio">
     <div class="container nav-wrap">
-      <a class="identity" href="#inicio" aria-label="Marcelo Gonçalves | início">
-        <span class="avatar" aria-hidden="true"><img src="assets/marcelo-cta-v2.png" alt=""></span>
-        <span><strong>Marcelo Gonçalves</strong><small>@marcelogoncalves.ofc</small></span>
+      <a class="identity" href="#inicio" aria-label="Laboratório do Marcelo, início">
+        <img src="assets/marcelo-cta-v2.png" alt="" width="44" height="44">
+        <span><strong>Laboratório do Marcelo<span class="brand-dot">.</span></strong><small>por Marcelo Gonçalves</small></span>
       </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span><span class="sr-only">Abrir menu</span>
-      </button>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true">☰</span><span class="sr-only">Abrir menu</span></button>
       <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-        <a href="#projetos">Projetos</a>
-        <a href="#sobre">Sobre</a>
-        <a class="nav-cta" href="#contato">Vamos conversar</a>
+        <a href="#explorar">Explorar</a><a href="#bancada">Em bancada</a><a href="#sobre">Sobre</a>
+        <a class="nav-cta" href="#acompanhar">Acompanhar <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
-
   <main id="conteudo">
-    <section class="hero section-grid">
+    <section class="hero">
       <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow">Dados · Mercado · Produto · IA</p>
-          <h1>Dados e ideias que <span>viram produtos úteis.</span></h1>
-          <p class="hero-lead">Conheça os projetos que fazem parte da minha trajetória e como conecto informação financeira, tecnologia e necessidades reais de clientes.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projetos">
-              Conhecer projetos <span aria-hidden="true">↓</span>
-            </a>
-            <a class="button text-button" href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Acompanhar no Instagram <span aria-hidden="true">↗</span></a>
-          </div>
+          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Laboratório aberto · Acesso gratuito</p>
+          <h1>Menos só assistir.<br>Mais <span>experimentar.</span></h1>
+          <p class="hero-lead">As ideias que eu compartilho no Instagram e no YouTube ganham um lugar para você colocar a mão na massa. Explore, teste e descubra o que funciona para você.</p>
+          <div class="hero-actions"><a class="button primary" href="#explorar">Explorar ferramentas <span aria-hidden="true">↓</span></a><a class="button subtle" href="#sobre">Conheça o laboratório <span aria-hidden="true">↗</span></a></div>
+          <p class="microcopy">Grátis. Sem cadastro. Para aprender fazendo.</p>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="data-mark"><i></i><i></i><i></i><i></i></div>
-          <div class="visual-card visual-card-main">
-            <span>INFORMAÇÃO</span>
-            <strong>01</strong>
-            <p>Encontrar o que importa.</p>
-          </div>
-          <div class="visual-card visual-card-side">
-            <span>PRODUTO</span>
-            <strong>02</strong>
-            <p>Transformar em algo útil.</p>
-          </div>
-          <svg class="trend" viewBox="0 0 460 220" role="presentation">
-            <path d="M5 188 C72 126 115 160 172 125 S269 138 327 73 S400 61 454 17"/>
-            <circle cx="172" cy="125" r="7"/><circle cx="327" cy="73" r="7"/><circle class="last" cx="454" cy="17" r="8"/>
-          </svg>
-        </div>
+        <a class="hero-experiment" href="promptlab/index.html" aria-label="Abrir PromptLab, biblioteca gratuita de prompts">
+          <div class="experiment-top"><span>EXPERIMENTO 001</span><span class="outline-badge">Disponível</span></div>
+          <div class="prompt-demo" aria-hidden="true"><div class="demo-bar"><i></i><i></i><i></i><span>uma ideia → um prompt</span></div><div class="demo-body"><span class="demo-label">O QUE VAMOS CRIAR?</span><p>Uma ideia mais clara.<br>Um próximo passo.</p><div class="demo-tokens"><span>/brainstorm</span><span>/stepbystep</span></div><div class="demo-result"><span>+</span> Seu objetivo, seu contexto,<br>seu prompt.</div></div></div>
+          <div class="experiment-bottom"><div><span class="experiment-category">INTELIGÊNCIA ARTIFICIAL</span><h2>PromptLab</h2><p>420 atalhos para começar a criar.</p></div><span class="circle-arrow" aria-hidden="true">↗</span></div>
+        </a>
       </div>
+      <div class="container lab-strip"><span><b>IA</b> para criar</span><span><b>Dados</b> para entender</span><span><b>Experimentos</b> para aprender</span><span class="strip-note">Um laboratório em construção contínua <span aria-hidden="true">↗</span></span></div>
     </section>
-
-    <section class="projects" id="projetos">
+    <section class="explore section-space" id="explorar">
       <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">Portfólio</p><h2>Projetos que transformam informação em produto.</h2></div>
-          <p>Informação financeira, inteligência de mercado e novas ideias. Conheça cada iniciativa e acompanhe os próximos passos.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="project-top"><span class="project-number">01</span><span class="status live"><i></i> Em operação</span></div>
-            <div class="project-icon globe-icon" aria-hidden="true"><span></span></div>
-            <p class="project-type">Inteligência de mercado</p>
-            <h3>Today Brazil</h3>
-            <p>Plataforma bilíngue que organiza notícias, fontes primárias e documentos oficiais sobre o Brasil para investidores, executivos e leitores internacionais.</p>
-            <div class="project-role"><span>MEU FOCO</span><strong>Produto · Dados · Experiência</strong></div>
-            <a href="https://todaybrazil.tech/" target="_blank" rel="noopener noreferrer">Conhecer o projeto <span aria-hidden="true">↗</span></a>
+        <div class="section-heading"><div><p class="eyebrow">Escolha seu próximo teste</p><h2>Abra. Explore.<br><span>Faça do seu jeito.</span></h2></div><p>Ferramentas gratuitas que você pode usar agora. Comece por uma pergunta, uma tarefa ou uma ideia.</p></div>
+        <form class="catalog-controls" role="search" id="catalog-search"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar ferramentas</span><input id="tool-search" type="search" placeholder="O que você quer experimentar?" autocomplete="off"></label><label class="category-select"><span class="sr-only">Categoria</span><select id="tool-category"><option value="">Todas as categorias</option><option value="ia">Inteligência artificial</option><option value="dados">Análise de dados</option><option value="investimentos">Investimentos</option></select></label></form>
+        <div class="catalog-meta"><p id="result-count" role="status" aria-live="polite">2 ferramentas disponíveis</p><span>100% gratuito</span></div>
+        <div class="tool-grid" id="tool-grid">
+          <article class="tool-card" data-category="ia" data-search="promptlab prompts inteligencia artificial ia escrita marketing imagens produtividade biblioteca atalhos criar">
+            <div class="tool-art" aria-hidden="true"><span class="art-command">/</span><div class="art-tokens"><span>/brainstorm</span><span>/dataanalysis</span><span>/storytelling</span></div><span class="art-caption">SUA IDEIA, BEM EXPLICADA.</span></div>
+            <div class="tool-content"><div class="tool-meta"><span>IA &amp; produtividade</span><span class="available"><i aria-hidden="true"></i> Disponível</span></div><h3>PromptLab</h3><p>Encontre atalhos, combine instruções e monte um prompt com seu objetivo. Copie e use na ferramenta de IA que preferir.</p><ul class="tool-facts" aria-label="Recursos do PromptLab"><li>420 atalhos</li><li>20 categorias</li><li>60 combinações</li></ul><a class="tool-link" href="promptlab/index.html">Experimentar PromptLab <span aria-hidden="true">↗</span></a></div>
           </article>
-
-          <article class="project-card">
-            <div class="project-top"><span class="project-number">02</span><span class="status live"><i></i> Em operação</span></div>
-            <div class="project-icon chart-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <p class="project-type">Dados financeiros</p>
-            <h3>Klooks</h3>
-            <p>Soluções de dados financeiros de empresas, automação do planilhamento e integração de informações para apoiar análises e decisões de negócio.</p>
-            <div class="project-role"><span>ÁREAS DE ATUAÇÃO</span><strong>Dados · Análise · Automação</strong></div>
-            <a href="https://klooks.com.br/" target="_blank" rel="noopener noreferrer">Conhecer a Klooks <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top"><span class="project-number">03</span><span class="status live"><i></i> Em operação</span></div>
-            <div class="project-icon globe-icon" aria-hidden="true"><span></span></div>
-            <p class="project-type">Informação financeira</p>
-            <h3>Balanços Patrimoniais</h3>
-            <p>Consulta a demonstrações financeiras publicadas por empresas brasileiras. Um ponto de partida para estudos, pesquisas e análise de negócios.</p>
-            <div class="project-role"><span>INFORMAÇÃO PARA ANÁLISE</span><strong>Empresas · Balanços · Pesquisa</strong></div>
-            <a href="https://balancos.com.br/" target="_blank" rel="noopener noreferrer">Acessar balancos.com.br <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top"><span class="project-number">04</span><span class="status">Instagram</span></div>
-            <div class="project-icon project-letter" aria-hidden="true">a.</div>
-            <p class="project-type">Projeto no Instagram</p>
-            <h3>Automati.zei</h3>
-            <p>Mais um ponto de encontro para acompanhar meus projetos e ideias. Conheça o perfil @automati.zei no Instagram.</p>
-            <div class="project-role"><span>ACOMPANHE O PERFIL</span><strong>@automati.zei</strong></div>
-            <a href="https://www.instagram.com/automati.zei/" target="_blank" rel="noopener noreferrer">Conhecer a Automati.zei <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project-card dark">
-            <div class="project-top"><span class="project-number">05</span><span class="status building"><i></i> Em breve</span></div>
-            <div class="project-icon project-letter" aria-hidden="true">?</div>
-            <p class="project-type">Próximos passos</p>
-            <h3>Projeto secreto</h3>
-            <p>Estou preparando um novo projeto. Vou contar mais sobre ele por aqui e no Instagram, mais pra frente.</p>
-            <div class="project-role"><span>NOVIDADE A CAMINHO</span><strong>Mais detalhes em breve.</strong></div>
-            <a href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Acompanhar novidades <span aria-hidden="true">↗</span></a>
+          <article class="tool-card" data-category="dados" data-search="media mediana medias estatistica dados receita clientes distribuicao valores simulador grafico lousa viva">
+            <div class="tool-art data-art" aria-hidden="true"><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><span class="chart-average"></span><span class="chart-median"></span></div><span class="art-caption">UM VALOR MUDA. A LEITURA TAMBÉM.</span></div>
+            <div class="tool-content"><div class="tool-meta"><span>Análise de dados</span><span class="available"><i aria-hidden="true"></i> Disponível</span></div><h3>Quem a média representa?</h3><p>Mude a receita de um cliente fictício e veja o que acontece com a média e a mediana. Compare o gráfico, as contas e a leitura dos resultados.</p><ul class="tool-facts" aria-label="Recursos do simulador"><li>Simulação interativa</li><li>Contas abertas</li><li>Lousa Viva</li></ul><a class="tool-link" href="ferramentas/media-mediana/index.html">Abrir o simulador <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
+        <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">↗</span><h3>Ainda não tem um experimento por aqui.</h3><p>Tente outra busca ou explore as ferramentas disponíveis no laboratório.</p><button class="button primary" id="clear-search" type="button">Ver todas as ferramentas</button></div>
+        <noscript><p>O PromptLab está disponível no link acima. Ative o JavaScript para usar a busca e as ferramentas interativas.</p></noscript>
       </div>
     </section>
-
-    <section class="method section-grid">
-      <div class="container">
-        <p class="eyebrow">Como eu trabalho</p>
-        <h2>Meu processo em quatro etapas.</h2>
-        <div class="method-grid">
-          <div><span>01</span><strong>Escutar</strong><p>Entender onde profissionais perdem tempo ou contexto.</p></div>
-          <div><span>02</span><strong>Estruturar</strong><p>Separar o dado, a necessidade e a hipótese de solução.</p></div>
-          <div><span>03</span><strong>Construir</strong><p>Transformar o problema em uma experiência útil e testável.</p></div>
-          <div><span>04</span><strong>Aprender</strong><p>Levar ao usuário, observar o uso e melhorar o produto.</p></div>
-        </div>
-      </div>
+    <section class="workbench section-space" id="bancada">
+      <div class="container workbench-layout"><div><p class="eyebrow">Em bancada</p><h2>A próxima ideia<br>começa com<br><span>uma boa pergunta.</span></h2><p>O PromptLab abre o laboratório. Vou construir novas experiências a partir dos assuntos que exploro nos vídeos e das dúvidas que vocês trazem.</p><a class="text-link" href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Me conte o que gostaria de testar <span aria-hidden="true">↗</span></a></div><div class="bench-list"><article><span class="bench-number">01</span><div><span class="bench-status">Próximas experiências</span><h3>Dados que você pode explorar</h3><p>Estudos interativos para mudar valores, comparar cenários e entender o raciocínio.</p></div></article><article><span class="bench-number">02</span><div><span class="bench-status">Direção da série</span><h3>Da Lousa Viva para a prática</h3><p>Experiências que acompanham as explicações dos vídeos, uma pergunta de cada vez.</p></div></article><p class="bench-note">Estas experiências ainda estão em preparação. As ferramentas prontas aparecem na seção Explorar.</p></div></div>
     </section>
-
-    <section class="about-section" id="sobre">
-      <div class="container about-layout">
-        <div class="about-photo"><img src="assets/marcelo-cta-v2.png" alt="Retrato profissional de Marcelo Gonçalves"></div>
-        <div class="about-copy">
-          <p class="eyebrow">Sobre mim</p>
-          <h2>Conecto dados, produto e necessidades de clientes.</h2>
-          <p>Sou Marcelo Gonçalves. Minha experiência conecta mercado financeiro, construção de produtos de dados e relacionamento com clientes.</p>
-          <p>Depois de acompanhar de perto como profissionais buscam e usam informação, passei a trabalhar também na criação das ferramentas que resolvem esses problemas.</p>
-          <div class="social-actions">
-            <a class="button primary" href="https://br.linkedin.com/in/marcelo-gon%C3%A7alves-de-souza-96083546" target="_blank" rel="noopener noreferrer">Conversar no LinkedIn <span aria-hidden="true">↗</span></a>
-            <a class="button outline" href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Ver Instagram <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </div>
+    <section class="about section-space" id="sobre">
+      <div class="container about-layout"><div class="about-portrait"><img src="assets/marcelo-cta-v2.png" alt="Marcelo Gonçalves" width="480" height="480" loading="lazy"><span>MARCELO GONÇALVES<br>DADOS · IDEIAS · PRODUTOS · PESSOAS</span></div><div class="about-copy"><p class="eyebrow">Quem está na bancada</p><h2>Sou o Marcelo.<br><span>Vamos testar uma ideia?</span></h2><p>Minha experiência conecta dados financeiros, mercado, produto e relacionamento com clientes. Aqui, eu reúno ferramentas e experiências para transformar explicações em algo que você possa testar.</p><p>Este laboratório é uma extensão dos meus conteúdos. Você acompanha a ideia no vídeo, explora por aqui e traz novas perguntas para a conversa.</p><a class="text-link" href="https://br.linkedin.com/in/marcelo-gon%C3%A7alves-de-souza-96083546" target="_blank" rel="noopener noreferrer">Conheça minha trajetória <span aria-hidden="true">↗</span></a></div></div>
     </section>
-
-    <section class="final-cta" id="contato">
-      <div class="container final-layout">
-        <div><p class="eyebrow light">Vamos conversar</p><h2>Qual problema você está tentando resolver?</h2></div>
-        <div><p>Se o seu desafio envolve dados, produto ou tecnologia, vamos trocar experiências e entender o próximo passo.</p><a class="button white" href="https://br.linkedin.com/in/marcelo-gon%C3%A7alves-de-souza-96083546" target="_blank" rel="noopener noreferrer">Conversar no LinkedIn <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
+    <section class="follow-section" id="acompanhar"><div class="container follow-layout"><div><p class="eyebrow">Do vídeo para a prática</p><h2>Acompanhe a ideia.<br><span>Volte para experimentar.</span></h2><p>Nos meus canais, eu explico o raciocínio, compartilho os testes e mostro o que estou construindo. Aqui ficam as ferramentas para você explorar.</p></div><div class="follow-actions"><a class="button white" href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Acompanhar no Instagram <span aria-hidden="true">↗</span></a><a class="button glass" data-youtube hidden target="_blank" rel="noopener noreferrer">Acompanhar no YouTube <span aria-hidden="true">↗</span></a><p>@marcelogoncalves.ofc</p></div></div></section>
   </main>
-
-  <footer>
-    <div class="container footer-layout">
-      <div><strong>Marcelo Gonçalves</strong><p>Dados · Mercado · Produto · IA</p></div>
-      <div class="footer-links"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="https://br.linkedin.com/in/marcelo-gon%C3%A7alves-de-souza-96083546" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
-      <p class="copyright">© <span id="year"></span> Marcelo Gonçalves</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer><div class="container footer-layout"><a class="footer-brand" href="#inicio">Laboratório do Marcelo<span>.</span></a><div class="footer-links"><a href="#explorar">Ferramentas</a><a href="https://www.instagram.com/marcelogoncalves.ofc/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-youtube hidden target="_blank" rel="noopener noreferrer">YouTube ↗</a></div><p>© <span id="year">2026</span> Marcelo Gonçalves. Feito para explorar, testar e aprender.</p><span class="footer-note">Acesso gratuito · Sem cadastro</span></div></footer>
 </body>
 </html>
