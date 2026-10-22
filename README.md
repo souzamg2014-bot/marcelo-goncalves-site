@@ -9,7 +9,7 @@ A página principal passa de portfólio para laboratório público. O foco é ab
 ## Experiências disponíveis
 
 - `promptlab/index.html`: biblioteca interativa fornecida por Marcelo. São 420 atalhos em 20 categorias e 60 combinações, com busca, seleção, favoritos e cópia do prompt. Os atalhos são convenções de escrita, não comandos oficiais de uma IA. As escolhas ficam no navegador do visitante. A biblioteca monta textos; não executa modelos de IA.
-- `ferramentas/media-mediana/index.html`: simulador do estudo Quem a média representa? Quatro receitas fictícias de R$ 2.000 por mês ficam fixas e a quinta varia de R$ 0 a R$ 40.000. Gráfico, média, mediana e contas acompanham a alteração. A prévia original de 19/10 foi preservada; esta versão contém somente a ferramenta, sem vídeo ou voz sintética.
+- `ferramentas/simulador-lucro/index.html`: simulador Vender mais é lucrar mais? (Vendas & negócios). Preço, custo variável, custos fixos, vendas, variação de preço e de clientes, degrau opcional de custo fixo e cenários prontos. Valores fictícios, arquivo único sem dependências.
 
 O arquivo `PromptLab_Instagram_Interativo-1.html` permanece intacto como original recebido. A página adaptada ganha retorno ao laboratório e acentos em azul. A antiga página de portfólio foi copiada para `../historico/site/2026-10-21-portfolio/`, fora deste repositório público; o histórico Git também a conserva.
 
