@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vender mais é lucrar mais? | Laboratório do Marcelo</title>
+<meta name="description" content="Simulador gratuito: mude preço, custos e clientes e veja o que acontece com o lucro. Valores fictícios, contas abertas.">
+<style>
+:root{--blue:#2453ed;--ink:#151821;--muted:#616879;--paper:#f6f7fa;--line:#dfe3ec;--green:#2f7a4c;--red:#c2352b;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,input{font:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.container{width:min(calc(100% - 40px),1100px);margin-inline:auto}
+header{border-bottom:1px solid var(--line);background:#fffffff5;position:sticky;top:0;z-index:5}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:700;font-size:16px;letter-spacing:-.5px}.brand b{color:var(--blue)}
+.back{color:var(--blue);font-size:13px;font-weight:700}
+.eyebrow{text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:1.7px;color:var(--blue);margin:0 0 16px}
+.intro{padding:44px 0 24px}h1{font-size:clamp(36px,7vw,64px);line-height:1.03;letter-spacing:-2.5px;margin:0 0 16px}h1 span{color:var(--blue)}
+.intro p{color:var(--muted);font-size:16px;line-height:1.7;max-width:640px;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:20px 0 0}.facts li{font-size:11px;padding:6px 9px;border-radius:4px;background:var(--paper);color:#51596a}
+.scen{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.scen button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:11px 14px;font-size:13px;font-weight:700;color:var(--ink);cursor:pointer}
+.scen button:hover{border-color:var(--blue);color:var(--blue)}.scen button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.grid{display:grid;grid-template-columns:1fr;gap:20px;padding-bottom:40px}@media(max-width:879px){.panel.in{order:2}}
+@media(min-width:880px){.grid{grid-template-columns:380px 1fr;align-items:start}.panel.in{position:sticky;top:88px}}
+.panel{border:1px solid var(--line);border-radius:12px;background:#fff;padding:20px}
+.panel h2{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin:0 0 14px;color:var(--muted)}
+.ctl{padding:12px 0;border-top:1px solid var(--line)}.ctl:first-of-type{border-top:0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.row label{font-size:13px;font-weight:700}
+.row input[type=number]{width:104px;padding:7px 8px;border:1px solid var(--line);border-radius:6px;text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--blue);margin:10px 0 0;height:24px}
+.hint{font-size:11px;color:var(--muted);margin-top:2px}
+.tog{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:700;cursor:pointer}
+.step{display:none;gap:10px;margin-top:10px}.step.show{display:grid}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--paper);border-radius:10px;padding:16px}
+.card small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
+.card strong{display:block;font-size:clamp(26px,5vw,38px);letter-spacing:-1px;margin-top:6px;font-variant-numeric:tabular-nums}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.var{margin:14px 0;font-size:18px;font-weight:700}
+.phrase{border-left:3px solid var(--blue);padding:4px 0 4px 14px;font-size:16px;line-height:1.55;margin:16px 0}
+.alerts div{border-radius:8px;padding:10px 12px;font-size:13px;margin-top:8px;line-height:1.5}
+.warn{background:#fff6e0;color:#7a5600}.bad{background:#fdeceb;color:var(--red)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:16px;font-variant-numeric:tabular-nums}
+th,td{padding:9px 6px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.7px}
+svg{width:100%;display:block;margin-top:12px}svg text{font-family:Arial,Helvetica,sans-serif}
+details{margin-top:16px;font-size:13px;color:var(--muted);line-height:1.7}summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.note{font-size:12px;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);padding:20px 0 36px}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="../../index.html">Laboratório do Marcelo<b>.</b></a><a class="back" href="../../index.html#explorar">← Voltar ao laboratório</a></div></header>
+<main class="container">
+<section class="intro">
+<p class="eyebrow">Vendas &amp; negócios · Conta que ninguém faz</p>
+<h1>Vender mais é<br><span>lucrar mais?</span></h1>
+<p>Mude o preço, os custos e quantos clientes você ganha ou perde. Veja na hora o que acontece com o lucro.</p>
+<ul class="facts"><li>Simulação interativa</li><li>Contas abertas</li><li>Lousa Viva</li></ul>
+</section>
+<div class="scen" id="scen">
+<button data-s="base" class="on">Exemplo base</button>
+<button data-s="desc">Desconto de 20%</button>
+<button data-s="p1">+1% no preço</button>
+<button data-s="p10">+10% perdendo 20% dos clientes</button>
+<button data-s="estr">Crescer com estrutura</button>
+</div>
+<div class="grid">
+<section class="panel in" aria-label="Seus números">
+<h2>Seus números</h2>
+<div id="ctls"></div>
+<div class="ctl"><label class="tog"><input type="checkbox" id="degrau"> Custo fixo sobe em degrau</label>
+<div class="hint">Ex.: acima de 100 vendas você precisa contratar mais alguém.</div>
+<div class="step" id="stepbox"></div></div>
+</section>
+<section class="panel" aria-live="polite">
+<h2>Resultado</h2>
+<div class="big">
+<div class="card"><small>Lucro antes</small><strong id="l0">–</strong></div>
+<div class="card"><small>Lucro depois</small><strong id="l1">–</strong></div>
+</div>
+<div class="var" id="var"></div>
+<svg id="chart" viewBox="0 0 600 310" role="img" aria-label="Faturamento e lucro, antes e depois"></svg>
+<p class="phrase" id="phrase"></p>
+<div class="alerts" id="alerts"></div>
+<table><thead><tr><th></th><th>Antes</th><th>Depois</th></tr></thead><tbody id="tb"></tbody></table>
+<details><summary>Ver a conta</summary><p id="conta"></p>
+<p>Sobra por venda = preço − custo variável. Lucro = vendas × sobra por venda − custos fixos. Ponto de equilíbrio = custos fixos ÷ sobra por venda.</p></details>
+</section>
+</div>
+<p class="note">Ferramenta educativa, com exemplo fictício. Não é recomendação de preço nem consultoria. Na vida real, a reação dos clientes a um aumento é incerta: teste com cuidado.</p>
+</main>
+<script>
+function calc(i){
+  const m0=i.preco-i.cv, lucro0=i.vendas*m0-i.fixos;
+  const p1=i.preco*(1+i.dPreco/100), q1=i.vendas*(1+i.dCli/100), m1=p1-i.cv;
+  const f1=i.fixos+((i.degrau&&q1>i.degX)?i.degY:0);
+  const lucro1=q1*m1-f1, fat0=i.preco*i.vendas, fat1=p1*q1;
+  const pe0=m0>0?i.fixos/m0:Infinity, pe1=m1>0?f1/m1:Infinity;
+  let perdaMax=null; if(m1>0){perdaMax=(1-((lucro0+f1)/m1)/i.vendas)*100;}
+  const varPct=lucro0!==0?(lucro1-lucro0)/Math.abs(lucro0)*100:null;
+  return {m0,m1,lucro0,lucro1,fat0,fat1,f1,pe0,pe1,perdaMax,varPct,q1,p1};
+}
+const S={preco:100,cv:60,fixos:3000,vendas:100,dPreco:0,dCli:0,degrau:false,degX:100,degY:1500};
+const C=[["preco","Preço (R$)",1,1000,1,"Quanto o cliente paga por unidade"],["cv","Custo variável (R$)",0,1000,1,"Quanto custa cada unidade vendida"],["fixos","Custos fixos (R$/mês)",0,50000,100,"Aluguel, salários, sistemas"],["vendas","Vendas por mês",1,2000,1,"Unidades vendidas hoje"],["dPreco","Mudança no preço (%)",-30,30,1,"Negativo = desconto"],["dCli","Mudança em clientes (%)",-50,100,1,"Quantos você ganha ou perde"]];
+const ST=[["degX","Acima de (vendas)",0,5000,1],["degY","Fixos sobem (R$)",0,50000,100]];
+const SC={base:{},desc:{dPreco:-20,dCli:30},p1:{dPreco:1},p10:{dPreco:10,dCli:-20},estr:{dCli:50,degrau:true,degX:100,degY:1500}};
+const brl=v=>(v<0?"−":"")+"R$ "+Math.abs(Math.round(v)).toLocaleString("pt-BR");
+const num=v=>(Math.round(v*10)/10).toLocaleString("pt-BR");
+function ctl(k,l,mn,mx,st,h){return `<div class="ctl"><div class="row"><label for="n_${k}">${l}</label><input type="number" id="n_${k}" data-k="${k}" min="${mn}" max="${mx}" step="${st}"></div><input type="range" id="r_${k}" data-k="${k}" min="${mn}" max="${mx}" step="${st}" aria-label="${l}">${h?`<div class="hint">${h}</div>`:""}</div>`}
+document.getElementById("ctls").innerHTML=C.map(c=>ctl(...c)).join("");
+document.getElementById("stepbox").innerHTML=ST.map(c=>ctl(...c)).join("");
+document.querySelectorAll("input[data-k]").forEach(el=>el.addEventListener("input",e=>{const v=parseFloat(e.target.value);if(!isNaN(v)){S[e.target.dataset.k]=v;clr();draw();}}));
+document.getElementById("degrau").addEventListener("change",e=>{S.degrau=e.target.checked;clr();draw();});
+function clr(){document.querySelectorAll("#scen button").forEach(b=>b.classList.remove("on"));}
+document.querySelectorAll("#scen button").forEach(b=>b.addEventListener("click",()=>{Object.assign(S,{preco:100,cv:60,fixos:3000,vendas:100,dPreco:0,dCli:0,degrau:false,degX:100,degY:1500},SC[b.dataset.s]);clr();b.classList.add("on");draw();}));
+function draw(){
+  document.querySelectorAll("input[data-k]").forEach(el=>{if(document.activeElement!==el)el.value=S[el.dataset.k];});
+  document.getElementById("degrau").checked=S.degrau;document.getElementById("stepbox").classList.toggle("show",S.degrau);
+  const r=calc(S),cls=v=>v>=0?"pos":"neg";
+  const l0=document.getElementById("l0"),l1=document.getElementById("l1");
+  l0.textContent=brl(r.lucro0);l0.className=cls(r.lucro0);l1.textContent=brl(r.lucro1);l1.className=cls(r.lucro1);
+  const d=r.lucro1-r.lucro0;
+  document.getElementById("var").innerHTML=r.varPct===null?"":`<span class="${d>=0?"pos":"neg"}">${d>=0?"▲":"▼"} ${num(Math.abs(r.varPct))}% no lucro (${d>=0?"+":""}${brl(d)})</span>`;
+  let ph;
+  if(r.m1<=0)ph="Com esse preço, cada venda dá prejuízo. Vender mais só aumenta o buraco.";
+  else if(S.dPreco>0)ph=r.perdaMax>=0?`Com esse aumento, você pode perder até <b>${num(r.perdaMax)}%</b> dos clientes e ainda empatar com o lucro de hoje.`:`Mesmo sem perder clientes, esse cenário não alcança o lucro de hoje.`;
+  else if(S.dPreco<0){const g=-r.perdaMax;ph=`Com esse desconto, você precisa vender <b>${num(g)}% a mais</b> só pra empatar com o lucro de hoje.`;}
+  else ph=`Ponto de equilíbrio: você precisa de <b>${num(Math.ceil(r.pe1))}</b> vendas por mês pra não ter prejuízo.`;
+  document.getElementById("phrase").innerHTML=ph;
+  const a=[];
+  if(S.dPreco>5&&S.dCli>=0)a.push(`<div class="warn">Aumento acima de 5% sem perder nenhum cliente é pouco realista. Teste com alguma perda.</div>`);
+  if(r.m1<=0)a.push(`<div class="bad">Atenção: a sobra por venda ficou negativa. O preço não cobre o custo de cada unidade.</div>`);
+  if(r.lucro1<0&&r.fat1>r.fat0)a.push(`<div class="bad">O faturamento subiu, mas a empresa passou a ter prejuízo.</div>`);
+  document.getElementById("alerts").innerHTML=a.join("");
+  const pe=v=>isFinite(v)?num(Math.ceil(v))+" vendas":"não existe";
+  const rows=[["Preço",brl(S.preco),brl(r.p1)],["Vendas",num(S.vendas),num(r.q1)],["Faturamento",brl(r.fat0),brl(r.fat1)],["Sobra por venda",brl(r.m0),brl(r.m1)],["Margem de contribuição",brl(r.m0*S.vendas),brl(r.m1*r.q1)],["Custos fixos",brl(S.fixos),brl(r.f1)],["Lucro",brl(r.lucro0),brl(r.lucro1)],["Ponto de equilíbrio",pe(r.pe0),pe(r.pe1)]];
+  document.getElementById("tb").innerHTML=rows.map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td><td>${x[2]}</td></tr>`).join("");
+  document.getElementById("conta").textContent=`Depois: ${num(r.q1)} vendas × ${brl(r.m1)} − ${brl(r.f1)} = ${brl(r.lucro1)}`;
+  chart(r);
+}
+function chart(r){
+  const vals=[["Faturamento",r.fat0,r.fat1],["Lucro",r.lucro0,r.lucro1]];
+  const mx=Math.max(1,...vals.flatMap(v=>[Math.abs(v[1]),Math.abs(v[2])]));
+  const neg=Math.min(0,r.lucro0,r.lucro1)<0;const top=56,H=200,zero=neg?top+H*0.72:top+H;const sc=(zero-top)/mx;
+  let s=`<line x1="20" x2="580" y1="${zero}" y2="${zero}" stroke="#dfe3ec"/>`;
+  vals.forEach((v,g)=>{[1,2].forEach(j=>{const val=v[j],x=50+g*290+(j-1)*110,h=Math.min(Math.abs(val)*sc,neg&&val<0?H*0.28:999),y=val>=0?zero-h:zero;
+    const col=j===1?"#c4cde3":(g===1?(val>=0?"#2f7a4c":"#c2352b"):"#2453ed");
+    s+=`<rect x="${x}" y="${y}" width="90" height="${Math.max(h,1)}" rx="4" fill="${col}"/><text x="${x+45}" y="${val>=0?y-6:y+h+18}" text-anchor="middle" font-size="17" font-weight="700" fill="#151821">${brl(val)}</text><text x="${x+45}" y="302" text-anchor="middle" font-size="15" fill="#616879">${j===1?"antes":"depois"}</text>`;});
+    s+=`<text x="${150+g*290}" y="18" text-anchor="middle" font-size="15" font-weight="700" fill="#616879">${v[0].toUpperCase()}</text>`;});
+  document.getElementById("chart").innerHTML=s;
+}
+const h=location.hash.slice(1);const hb=document.querySelector(`#scen button[data-s="${h}"]`);if(hb)hb.click();else draw();
+</script>
+</body>
+</html>
